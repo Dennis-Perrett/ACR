@@ -155,6 +155,7 @@ def main():
         print('output dir:', acr.output_dir)
         os.makedirs(acr.output_dir, exist_ok=True)
 
+        imgpath = args().inputs # pull image path from args
         image = cv2.imread(imgpath)
         outputs = acr(image, imgpath)
         results_dict.update(outputs)
